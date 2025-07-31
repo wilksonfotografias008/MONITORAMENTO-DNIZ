@@ -1111,7 +1111,7 @@
                 if (currentHour !== lastFetchedHourMetar && !isFastPollingMetar) {
                     console.log(`METAR: Nova hora detectada (${currentHour}Z). Mudando para polling rápido.`);
                     isFastPollingMetar = true;
-                    startPollingMetar(10000); // 10 segundos
+                    startPollingMetar(60000); // 10 segundos
                 }
 
                 await fetchMetarSpeci();
@@ -1230,7 +1230,7 @@
             fetchMetarButton.addEventListener('click', () => {
                 fetchMetarSpeci();
                 isFastPollingMetar = true;
-                startPollingMetar(10000);
+                startPollingMetar(60000);
             });
 
             icaoCodeInput.addEventListener('keydown', (e) => {
