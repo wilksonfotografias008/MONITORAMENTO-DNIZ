@@ -1190,7 +1190,7 @@
                         if (hour !== null) {
                             lastFetchedHourMetar = hour;
 
-                            const isMessageUpdated = (Math.abs(currentHour - hour) <= 1);
+                           const isMessageUpdated = (hour === currentHour);
 
                             if (isMessageUpdated) {
                                 console.log('METAR: Mensagem da hora atual encontrada. Voltando para o polling padrão.');
